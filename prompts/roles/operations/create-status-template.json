@@ -1,7 +1,7 @@
 {
   "id": "operations-create-status-template",
   "title": "Weekly Status Report Template",
-  "description": "Create a weekly status report template",
+  "description": "Create a weekly status report template in markdown format",
   "category": "Business",
   "function": "operations",
   "extensions": ["computercontroller"],
