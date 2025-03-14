@@ -1,0 +1,32 @@
+{
+  "id": "developer-kotlin-test-migration",
+  "title": "Migrate Java Tests to Kotlin",
+  "description": "Select Java tests and migrate them to Kotlin, including compilation verification",
+  "category": "Technical",
+  "function": "developer",
+  "extensions": ["developer", "computercontroller"],
+  "prompt": "Please help migrate Java tests to Kotlin by:\n1. Finding and selecting 5 Java test files\n2. Converting each test to Kotlin while maintaining functionality\n3. Removing original Java files\n4. Verifying compilation with gradle\n5. Generating migration diffs\n\nFor each test file:\n- Create equivalent Kotlin test\n- Maintain test structure and assertions\n- Verify compilation success\n- Generate diff for review",
+  "example": "This will:\n1. List Java test files and select 5\n2. For each selected file:\n   - Convert Java test to Kotlin syntax\n   - Save as new .kt file\n   - Delete original .java file\n   - Run 'gradle compile' to verify\n   - Fix any compilation errors\n3. Run generate_diffs.py to show changes\n\nExample output:\nMigrated Tests:\n- UserServiceTest.java → UserServiceTest.kt\n- OrderValidatorTest.java → OrderValidatorTest.kt\n- PaymentProcessorTest.java → PaymentProcessorTest.kt\n- InventoryManagerTest.java → InventoryManagerTest.kt\n- ShippingCalculatorTest.java → ShippingCalculatorTest.kt\n\nCompilation: Successful\nDiffs generated in: migration_diffs.txt",
+  "tags": ["kotlin", "java", "test-migration", "automation", "gradle"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "project_path": {
+      "description": "Path to the project root directory",
+      "required": true
+    },
+    "test_count": {
+      "description": "Number of tests to migrate (default: 5)",
+      "required": false,
+      "default": 5
+    },
+    "diff_script_path": {
+      "description": "Path to the generate_diffs.py script",
+      "required": true
+    }
+  }
+}
