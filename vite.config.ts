@@ -14,10 +14,5 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  plugins: [
-    reactRouter({
-      basename: "/testing-deploy/"
-    }), 
-    tsconfigPaths()
-  ],
+  plugins: [reactRouter(), tsconfigPaths()],
 });
