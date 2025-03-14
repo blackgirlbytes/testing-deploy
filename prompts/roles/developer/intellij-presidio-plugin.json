@@ -1,0 +1,23 @@
+{
+  "id": "dev-intellij-presidio-plugin",
+  "title": "Create IntelliJ Plugin",
+  "description": "Develop an IntelliJ plugin that links logging statements to Presidio logs",
+  "category": "Technical",
+  "function": "developer",
+  "extensions": ["developer"],
+  "prompt": "Create a plugin for IntelliJ that creates clickable links in logging statements to Presidio. Requirements:\n\n1. Plugin should activate on hover over logging statements (e.g., logger.info(\"message\"))\n2. Generate Presidio search URL in format: https://square-console.sqprod.co/presidio/search?query=loggerName:${className}+\"${logMessage}\"\n3. URL should:\n   - Include the logger class name\n   - Append the log message in quotes (unencoded)\n4. Handle common issues:\n   - Ensure gradlew file exists and has execute permissions\n   - Check IDE compatibility (requires build 241.* or newer)\n\nPlease provide implementation guidance and troubleshooting steps for common errors.",
+  "example": "For a logging statement:\nlogger.info(\"User authentication failed\")\n\nIn class com.square.auth.LoginService, generates URL:\nhttps://square-console.sqprod.co/presidio/search?query=loggerName:com.square.auth.LoginService+\"User authentication failed\"",
+  "tags": ["intellij", "plugin", "logging", "presidio", "development-tools"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "ide_version": {
+      "description": "IntelliJ IDE version to ensure compatibility",
+      "required": true
+    }
+  }
+}
