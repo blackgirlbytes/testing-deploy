@@ -4,7 +4,7 @@ import { FilterPills } from "../components/filter-pills";
 import { FilterSidebar } from "../components/filter-sidebar";
 import { useState, useEffect } from "react";
 import type { Prompt } from "../types/prompt";
-import type { FilterCategories } from "../types/filters";
+import type { FilterCategories, FilterType, Filters } from "../types/filters";
 import { fetchPrompts, searchPrompts } from "../prompt-data";
 import { fetchFilterCategories } from "../utils/filters";
 import { motion } from "framer-motion";
@@ -30,9 +30,9 @@ export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [filters, setFilters] = useState({
-    functions: [] as string[],
-    extensions: [] as string[],
+  const [filters, setFilters] = useState<Filters>({
+    functions: [],
+    extensions: [],
     verified: false
   });
   const [isLoading, setIsLoading] = useState(true);
@@ -124,13 +124,21 @@ export default function HomePage() {
   const currentPrompts = filteredPrompts.slice(startIndex, endIndex);
 
   // Handle filter changes
-  const handleFilterChange = (type: keyof typeof filters, value: string) => {
-    setFilters(prev => ({
-      ...prev,
-      [type]: prev[type].includes(value) 
-        ? prev[type].filter(v => v !== value)
-        : [...prev[type], value]
-    }));
+  const handleFilterChange = (type: FilterType, value: string) => {
+    setFilters(prev => {
+      if (type === "verified") {
+        return {
+          ...prev,
+          verified: !prev.verified
+        };
+      }
+      return {
+        ...prev,
+        [type]: prev[type].includes(value)
+          ? (prev[type] as string[]).filter(v => v !== value)
+          : [...(prev[type] as string[]), value]
+      };
+    });
     setCurrentPage(1); // Reset to first page when filters change
   };
 

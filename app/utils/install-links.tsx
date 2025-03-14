@@ -1,30 +1,26 @@
-import type { MCPServer } from "../types/server";
+import type { ServerConfig } from '../types/server';
 
-export function getGooseInstallLink(server: MCPServer): string {
-  if (server.is_builtin) {
-    const queryParams = [
-      'cmd=goosed',
-      'arg=mcp',
-      `arg=${encodeURIComponent(server.id)}`,
-      `description=${encodeURIComponent(server.id)}`
-    ].join('&');
-    return `goose://extension?${queryParams}`;
+export function getInstallCommand(platform: string): string {
+  switch (platform.toLowerCase()) {
+    case 'macos':
+      return 'brew install goose';
+    case 'linux':
+      return 'curl -fsSL https://get.goose.ai | sh';
+    case 'windows':
+      return 'winget install goose';
+    default:
+      return 'Platform not supported';
   }
-  const parts = server.command.split(" ");
-  const baseCmd = parts[0]; // npx or uvx
-  const args = parts.slice(1); // remaining arguments
-  const queryParams = [
-    `cmd=${encodeURIComponent(baseCmd)}`,
-    ...args.map((arg) => `arg=${encodeURIComponent(arg)}`),
-    `id=${encodeURIComponent(server.id)}`,
-    `name=${encodeURIComponent(server.name)}`,
-    `description=${encodeURIComponent(server.description)}`,
-    ...server.environmentVariables
-      .filter((env) => env.required)
-      .map(
-        (env) => `env=${encodeURIComponent(`${env.name}=${env.description}`)}`
-      ),
-  ].join("&");
+}
 
-  return `goose://extension?${queryParams}`;
+export function getInstallLink(arg: string): string {
+  return `https://get.goose.ai/${arg}`;
+}
+
+export function getConfigCommand(env: ServerConfig): string {
+  return `goose config set server ${env.serverUrl}`;
+}
+
+export function getAuthCommand(env: ServerConfig): string {
+  return `goose auth login ${env.authUrl}`;
 }

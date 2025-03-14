@@ -1,10 +1,17 @@
-export interface FilterCategory {
-  id: string;
-  name: string;
+export type FilterType = "functions" | "extensions" | "verified";
+
+export interface Filters {
+  functions: string[];
+  extensions: string[];
+  verified: boolean;
 }
 
 export interface FilterCategories {
-  functions: FilterCategory[];
-  skillLevels: FilterCategory[];
-  useCases: FilterCategory[];
+  functions: string[];
+  extensions: string[];
+}
+
+export interface FilterCategory {
+  id: string;
+  name: string;
 }

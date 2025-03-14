@@ -1,15 +1,12 @@
 import { Package, Puzzle } from "lucide-react";
 import { Checkbox } from "./ui/checkbox";
 import { Label } from "./ui/label";
-import type { FilterCategory } from "../types/filters";
+import type { FilterType, Filters } from "../types/filters";
 
 interface FilterSidebarProps {
-  functions: FilterCategory[];
-  selected: {
-    functions: string[];
-    extensions: string[];
-  };
-  onFilterChange: (type: string, value: string) => void;
+  functions: string[];
+  selected: Filters;
+  onFilterChange: (type: FilterType, value: string) => void;
   extensions?: string[];
 }
 
@@ -38,15 +35,15 @@ export function FilterSidebar({
         </h3>
         <div className="space-y-2">
           {functions.map((func) => (
-            <div key={func.id} className="flex items-center space-x-2">
+            <div key={func} className="flex items-center space-x-2">
               <Checkbox 
-                id={`function-${func.id}`}
-                checked={selected.functions.includes(func.id)}
-                onCheckedChange={() => onFilterChange('functions', func.id)}
+                id={`function-${func}`}
+                checked={selected.functions.includes(func)}
+                onCheckedChange={() => onFilterChange('functions', func)}
                 className="border-borderSubtle"
               />
-              <Label htmlFor={`function-${func.id}`} className="text-sm text-textStandard">
-                {func.name}
+              <Label htmlFor={`function-${func}`} className="text-sm text-textStandard">
+                {func}
               </Label>
             </div>
           ))}
