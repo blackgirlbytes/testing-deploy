@@ -12,8 +12,5 @@ export const router = createHashRouter(
       path: "/detail/:id",
       element: <DetailPage />,
     },
-  ],
-  {
-    basename: "/testing-deploy"
-  }
+  ]
 );
