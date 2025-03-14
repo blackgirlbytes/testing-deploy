@@ -4,10 +4,8 @@ import tailwindcss from "tailwindcss";
 import { defineConfig } from "vite";
 import tsconfigPaths from "vite-tsconfig-paths";
 
-const basename = process.env.VITE_BASENAME || "/testing-deploy/";
-
 export default defineConfig({
-  base: basename,
+  base: "/testing-deploy/",
   build: {
     outDir: 'dist',
   },
@@ -16,5 +14,10 @@ export default defineConfig({
       plugins: [tailwindcss, autoprefixer],
     },
   },
-  plugins: [reactRouter(), tsconfigPaths()],
+  plugins: [
+    reactRouter({
+      basename: "/testing-deploy/"
+    }), 
+    tsconfigPaths()
+  ],
 });

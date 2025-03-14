@@ -14,7 +14,6 @@ export const router = createHashRouter(
     },
   ],
   {
-    // This ensures the router uses hash-based routing correctly
-    basename: "",
+    basename: "/testing-deploy"
   }
 );

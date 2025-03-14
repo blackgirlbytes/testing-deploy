@@ -1,8 +1,6 @@
 import type { Config } from "@react-router/dev/config";
 
-const basename = process.env.VITE_BASENAME || "";
-
 export default {
-  basename,
+  basename: "/testing-deploy/",
   ssr: false,
 } satisfies Config;
