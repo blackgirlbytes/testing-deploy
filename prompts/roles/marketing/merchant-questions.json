@@ -1,0 +1,27 @@
+{
+  "id": "business-merchant-questions",
+  "title": "Merchant Review Questions",
+  "description": "Generate strategic questions for merchant performance review based on sales and customer data",
+  "category": "Business",
+  "function": "marketing",
+  "extensions": ["computercontroller"],
+  "prompt": "I'm presenting our quarterly sales data and customer metrics to a restaurant merchant. What questions should I be asking their team?",
+  "example": "Using sample restaurant data:\n- Monthly revenue: $120,000\n- Average order value: $35\n- Customer repeat rate: 45%\n- Peak hours: 12-2pm, 6-8pm\n\nThis will generate strategic questions like:\n- With 45% of customers returning, what initiatives could increase our repeat customer rate?\n- How can we increase sales during non-peak hours?\n- What menu items drive the highest margins?\n- Which delivery platforms are most profitable for us?\n- How does our average order value compare to similar restaurants in the area?",
+  "tags": ["restaurant", "merchant", "analysis", "strategy", "sales", "performance"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "data_type": {
+      "description": "The type of data being analyzed (e.g., sales data, customer metrics)",
+      "required": true
+    },
+    "merchant_type": {
+      "description": "The type of merchant (e.g., restaurant, retail store)",
+      "required": true
+    }
+  }
+}
