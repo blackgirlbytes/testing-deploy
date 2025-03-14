@@ -4,6 +4,7 @@
   "description": "Generate and maintain an automated dashboard tracking top retailers' digital presence and market activities",
   "category": "Business",
   "function": "marketing",
+  "featured": true,
   "extensions": ["computercontroller", "tavily"],
   "external": true,
   "extensionUrl": "https://github.com/tavily-ai/tavily-mcp",

@@ -115,6 +115,13 @@ export default function HomePage() {
       prompt.description.toLowerCase().includes(searchQuery.toLowerCase());
 
     return matchesCategory && matchesFunctions && matchesExtensions && matchesVerified && matchesSearch;
+  }).sort((a, b) => {
+    // When showing all prompts (no category selected), sort featured items first
+    if (!selectedCategory) {
+      if (a.featured && !b.featured) return -1;
+      if (!a.featured && b.featured) return 1;
+    }
+    return 0;
   });
 
   // Pagination calculations

@@ -4,6 +4,7 @@
   "description": "Have goose place a phone call",
   "category": "Business",
   "function": "operations",
+  "featured": true,
   "extensions": ["vyop"],
   "external": true,
   "extensionUrl": "https://github.com/paulotaylor/voyp-mcp",

@@ -4,6 +4,7 @@
   "description": "Generate a blog post from a YouTube video transcript",
   "category": "Productivity",
   "function": "content",
+  "featured": true,
   "extensions": ["youtube-transcript"],
   "external": true,
   "extensionUrl": "https://github.com/jkawamoto/mcp-youtube-transcript",
