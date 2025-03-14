@@ -1,0 +1,17 @@
+{
+  "id": "operations-create-status-template",
+  "title": "Weekly Status Report Template",
+  "description": "Create a weekly status report template",
+  "category": "Business",
+  "function": "operations",
+  "extensions": ["computercontroller"],
+  "prompt": "Please, help me create a weekly status report template.",
+  "example": "This will help you create a structured template for weekly status reporting that you can reuse.",
+  "tags": ["template", "status report", "project management"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true
+}
