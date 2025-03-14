@@ -12,5 +12,8 @@ export const router = createHashRouter(
       path: "/detail/:id",
       element: <DetailPage />,
     },
-  ]
+  ],
+  {
+    basename: "", // Empty string for HashRouter
+  }
 );

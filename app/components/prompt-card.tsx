@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Puzzle } from "lucide-react";
 import type { Prompt } from "../types/prompt";
 

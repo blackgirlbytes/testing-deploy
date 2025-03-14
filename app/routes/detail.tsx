@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router";
+import { useParams, Link } from "react-router-dom";
 import {
   Copy,
   ArrowLeft,
@@ -73,7 +73,7 @@ export default function DetailPage() {
     }
   };
 
-  if (!prompt) {
+  if (isLoading) {
     return (
       <div className="max-w-4xl mx-auto">
         <div className="flex items-center gap-2 mb-6">
@@ -97,6 +97,34 @@ export default function DetailPage() {
           <div className="h-8 w-48 bg-gray-200 dark:bg-gray-700 rounded mb-4"></div>
           <div className="h-4 w-full bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
           <div className="h-4 w-2/3 bg-gray-200 dark:bg-gray-700 rounded"></div>
+        </div>
+      </div>
+    );
+  }
+
+  if (!prompt) {
+    return (
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center gap-2 mb-6">
+          <Link to="/">
+            <Button className="">
+              <ArrowLeft className="h-4 w-4" />
+              Back
+            </Button>
+          </Link>
+          <div className="text-sm text-gray-500 dark:text-gray-400">
+            <Link
+              to="/"
+              className="hover:text-accent dark:hover:text-accent/90"
+            >
+              Goose Prompts
+            </Link>{" "}
+            /
+          </div>
+        </div>
+        <div className="text-center py-8">
+          <h2 className="text-2xl font-medium text-textProminent">Prompt not found</h2>
+          <p className="text-textSubtle mt-2">{error || "The requested prompt could not be found."}</p>
         </div>
       </div>
     );
