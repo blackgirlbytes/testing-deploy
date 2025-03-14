@@ -13,6 +13,7 @@ export interface Prompt {
   rating: number;
   usageCount: number;
   verified: boolean;
+  featured?: boolean;  // Added featured property as optional
   extensions: string[];
   external?: boolean;
   extensionUrl?: string;
