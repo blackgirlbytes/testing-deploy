@@ -1,3 +1,7 @@
-export interface RootData {
-  // Add any root-level data types here
+import type { LinksFunction } from "react-router";
+
+export interface ErrorBoundaryProps {
+  error: unknown;
 }
+
+export type { LinksFunction };
