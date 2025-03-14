@@ -1,0 +1,77 @@
+{
+  "/Users/rizel/Documents/testing-deploy/app/styles/main.css": {
+    "file": "assets/main-DFbTpoe4.css",
+    "src": "/Users/rizel/Documents/testing-deploy/app/styles/main.css"
+  },
+  "_button-FsBlgQrD.js": {
+    "file": "assets/button-FsBlgQrD.js",
+    "name": "button",
+    "imports": [
+      "_chunk-K6CSEXPM-BYW8Kyoh.js"
+    ]
+  },
+  "_chunk-K6CSEXPM-BYW8Kyoh.js": {
+    "file": "assets/chunk-K6CSEXPM-BYW8Kyoh.js",
+    "name": "chunk-K6CSEXPM"
+  },
+  "_index-B47KnhG3.js": {
+    "file": "assets/index-B47KnhG3.js",
+    "name": "index",
+    "imports": [
+      "_chunk-K6CSEXPM-BYW8Kyoh.js"
+    ]
+  },
+  "_prompt-data-QE4OHzdC.js": {
+    "file": "assets/prompt-data-QE4OHzdC.js",
+    "name": "prompt-data",
+    "imports": [
+      "_chunk-K6CSEXPM-BYW8Kyoh.js"
+    ]
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-Dp2qkTqT.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_button-FsBlgQrD.js",
+      "_chunk-K6CSEXPM-BYW8Kyoh.js"
+    ],
+    "assets": [
+      "assets/main-DFbTpoe4.css"
+    ]
+  },
+  "app/routes/detail.tsx?__react-router-build-client-route": {
+    "file": "assets/detail-DwbBv8u6.js",
+    "name": "detail",
+    "src": "app/routes/detail.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_button-FsBlgQrD.js",
+      "_chunk-K6CSEXPM-BYW8Kyoh.js",
+      "_prompt-data-QE4OHzdC.js"
+    ]
+  },
+  "app/routes/home.tsx?__react-router-build-client-route": {
+    "file": "assets/home-BauvNg5M.js",
+    "name": "home",
+    "src": "app/routes/home.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_button-FsBlgQrD.js",
+      "_chunk-K6CSEXPM-BYW8Kyoh.js",
+      "_prompt-data-QE4OHzdC.js",
+      "_index-B47KnhG3.js"
+    ]
+  },
+  "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx": {
+    "file": "assets/entry.client-B5rBHWV3.js",
+    "name": "entry.client",
+    "src": "node_modules/@react-router/dev/dist/config/defaults/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_chunk-K6CSEXPM-BYW8Kyoh.js",
+      "_index-B47KnhG3.js"
+    ]
+  }
+}
