@@ -1,0 +1,32 @@
+{
+  "id": "legal-ai-content-detection",
+  "title": "AI Content Detection Policies",
+  "description": "Enforce content policies by detecting AI-generated submissions and ensuring compliance with platform guidelines",
+  "category": "Business",
+  "function": "legal",
+  "extensions": ["computercontroller"],
+  "prompt": "Please analyze the provided content for:\n1. Indicators of AI generation\n2. Policy compliance issues\n3. Required disclosures or missing attributions\n\nProvide a detailed report including:\n- AI detection confidence score\n- Policy violation alerts\n- Recommended actions\n- Suggested improvements for compliance",
+  "example": "Input: A blog post submission\nOutput Analysis:\n- AI Detection: 87% likelihood of AI generation\n- Policy Issues Found:\n  * Missing AI disclosure statement\n  * No attribution for quoted material\n- Required Actions:\n  * Add AI content disclosure\n  * Include proper citations\n  * Update metadata tags\n- Recommendations:\n  * Add human editorial review\n  * Include original research/insights\n  * Clearly mark AI-assisted sections",
+  "tags": ["content-moderation", "ai-detection", "policy-enforcement", "compliance", "content-review"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "content_text": {
+      "description": "The text content to analyze",
+      "required": true
+    },
+    "policy_rules": {
+      "description": "JSON object containing specific platform policy rules to check",
+      "required": false
+    },
+    "detection_threshold": {
+      "description": "Minimum confidence score for AI detection (0-1)",
+      "required": false,
+      "default": 0.8
+    }
+  }
+}

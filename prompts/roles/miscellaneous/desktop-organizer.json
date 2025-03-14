@@ -1,0 +1,28 @@
+{
+  "id": "miscellaneous-desktop-organizer",
+  "title": "Organize Desktop Files",
+  "description": "Analyze and organize files on the Desktop into appropriate folders",
+  "category": "Productivity",
+  "function": "miscellaneous",
+  "extensions": ["computercontroller"],
+  "prompt": "Please help me organize the files on my Desktop by:\n1. Analyzing current Desktop contents\n2. Creating appropriate folders based on file types\n3. Moving files into organized folders\n4. Providing a summary of changes made",
+  "example": "This will:\n- List all files on the Desktop\n- Create folders like Documents, Images, Downloads etc.\n- Move files to appropriate folders\n- Show a report of what was moved where\n\nExample output:\nMoved:\n- 3 PDFs → Documents\n- 5 images → Images\n- 2 spreadsheets → Spreadsheets",
+  "tags": ["organization", "files", "desktop", "cleanup", "productivity"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "desktop_path": {
+      "description": "Path to the Desktop folder",
+      "required": true
+    },
+    "create_backup": {
+      "description": "Whether to create backup copies before moving files",
+      "required": false,
+      "default": false
+    }
+  }
+}
