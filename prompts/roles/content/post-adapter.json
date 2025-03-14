@@ -1,0 +1,27 @@
+{
+  "id": "content-post-adapter",
+  "title": "Adapt Social Post for Platform",
+  "description": "Convert a social media post to fit different platform requirements and best practices",
+  "category": "Business",
+  "function": "content",
+  "extensions": ["developer"],
+  "prompt": "Please adapt this post for [Target Platform]. Consider:\n\n1. Character limits\n2. Platform-specific features\n3. Format conventions\n4. Hashtag usage\n5. Link formatting\n6. Media recommendations\n7. Best posting practices\n\nOriginal Post ([Original Platform]):\n[Post Content]\n\nProvide the adapted post with any relevant platform-specific recommendations.",
+  "example": "Original Post (LinkedIn):\n\"🎉 Excited to announce our latest case study! We helped ABC Corp increase their productivity by 150% using our enterprise solution. Read the full story about how we transformed their workflow, improved team collaboration, and delivered measurable results in just 3 months. [Link]\n\n#EnterpriseSuccess #ProductivityTools #DigitalTransformation\"\n\nAdapted for Twitter:\n\"🎉 New case study!\n\nHow we helped ABC Corp boost productivity by 150%:\n• Workflow transformation\n• Team collaboration\n• 3-month implementation\n\n[Short Link]\n\n#ProductivityTools\"\n\nPlatform-Specific Notes:\n- Shortened to fit Twitter's character limit\n- Bullet points for scanability\n- Reduced hashtags to most relevant\n- Used URL shortener for link\n- Kept key metrics and emojis",
+  "tags": ["social media", "content adaptation", "cross-platform", "marketing", "content strategy"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "target_platform": {
+      "description": "The platform to adapt the post for (e.g., Twitter, LinkedIn, Instagram, Facebook)",
+      "required": true
+    },
+    "original_platform": {
+      "description": "The platform the original post was written for",
+      "required": true
+    }
+  }
+}

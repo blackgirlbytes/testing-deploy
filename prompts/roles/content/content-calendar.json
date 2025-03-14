@@ -1,0 +1,27 @@
+{
+  "id": "content-content-calendar",
+  "title": "Create Content Calendar",
+  "description": "Generate a structured content calendar with topics, deadlines, and distribution channels",
+  "category": "Business",
+  "function": "content",
+  "extensions": ["developer"],
+  "prompt": "Please create a content calendar for [Time Period] that includes:\n\n1. Content Topics\n2. Content Types (blog, social media, video, etc.)\n3. Publication Dates\n4. Distribution Channels\n5. Target Audience\n6. Key Messages/Themes\n7. Content Status\n\nFormat the calendar in a clear, organized structure that can be easily shared with the team.",
+  "example": "# Q2 2025 Content Calendar\n\n## April 2025\n\n### Week 1 (April 1-7)\n- Blog Post: \"10 Tips for Digital Marketing\"\n  - Type: Blog Article\n  - Publish: April 3\n  - Channel: Website, LinkedIn\n  - Audience: Small Business Owners\n  - Theme: Digital Marketing Basics\n  - Status: Draft\n\n- Social Media Series: \"Quick Marketing Tips\"\n  - Type: Social Posts (5x)\n  - Publish: Daily (Mon-Fri)\n  - Channel: Twitter, Instagram\n  - Audience: Marketing Professionals\n  - Theme: Professional Development\n  - Status: Planning\n\n### Week 2 (April 8-14)\n[Continue with more weeks...]\n",
+  "tags": ["content marketing", "planning", "editorial calendar", "content strategy", "marketing"],
+  "author": "GooseAI Team",
+  "dateAdded": "2025-03-14",
+  "lastUpdated": "2025-03-14",
+  "rating": 0,
+  "usageCount": 0,
+  "verified": true,
+  "variables": {
+    "time_period": {
+      "description": "The time period to plan content for (e.g., Q2 2025, March 2025)",
+      "required": true
+    },
+    "team_size": {
+      "description": "Number of team members involved in content creation",
+      "required": false
+    }
+  }
+}
